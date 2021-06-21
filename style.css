@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(315deg,#1ff926 0%, #4e97e1 74%);;
+    color: #fff;
+    position: relative;
+}
+.navbar{
+    width: 90%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+    margin-left: 60px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 70px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 2px;
+}
+nav ul li a:hover{
+    color:#1c4cdc;
+}
+.row{
+    width: 80%;
+    min-height: 85vh;
+    margin:auto;
+    display: flex;
+    flex-wrap:wrap;
+}
+.col{
+    margin: 20px 0;
+    flex-basis:50%;
+    min-width: 300px;
+    height: 100%;
+    position: relative;
+
+}
+.gallery-box{
+    max-width: 370px;
+    position: relative;
+    margin: auto;
+}
+.gallery-box img{
+    width: 100%;
+    border:10px solid rgba(255,255,255,0.2);
+    box-sizing:border-box;
+}
+.gallery-box ul{
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.gallery-box ul li{
+    list-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.gallery-box .active{
+    color:#54715b;
+}
+.gallery-box ul li::after{
+    content:"";
+    width: 30px;
+    height: 2px;
+    background: transparent;
+    position: absolute;
+    top: 8px;
+    left: -5px;
+}
+.gallery-box .active::after{
+    background: #41623e;
+}
+.text-box{
+    max-width: 400px;
+    margin-top: 100px;
+
+}
+h5{
+    color:#baedb6;
+    text-shadow: 5px 5px 10px #00FF00;
+}
+.text-box h1{
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    line-height: 65px;
+    font-family: "Audiowide",sens-serif;
+}
+.social-link{
+    margin-top: -152px;
+}
+.social-link a{
+    font-size: 30px;
+    margin-right: 30px;
+    color: #4c4796;
+}
+.social-link a:hover{
+    color: #ed1d1d;
+}

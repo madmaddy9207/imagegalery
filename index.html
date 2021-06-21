@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="logo.png" class="logo" >
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">OFFICE</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="text-box">
+                <h5>Photography</h5>
+                <h1>Photography <br> Make's Happiness</h1>
+            </div>
+            </div>
+            <div class="col">
+                <div class="gallery-box">
+                    <img src="pic2.jpg" id="gallery">
+                    <ul>
+                        <li class="btn">01</li>
+                        <li class="btn active">02</li>
+                        <li class="btn">03</li>
+                        <li class="btn">04</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-link">
+                <a href="https://www.youtube.com/channel/UCAk_oPWHyditV7IbzCKvCgg?sub_confirmation=1" target="blank" title="we are on Youtube"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com/abysthinks" target="blank" title="we are on instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="we are on github"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementsByClassName("btn");
+        var gallery=document.getElementById("gallery");
+
+        var images=new Array(
+            "pic1.png",
+            "pic2.jpg",
+            "pic3.png",
+            "pic4.png",
+        );
+        for(let i=0; i<btn.length; i++){
+            btn[i].onclick = function()
+            {
+                gallery.src = images[i];
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace("active" , "");
+                this.className += " active";
+            };
+        }
+    </script>
+</body>
+</html>
